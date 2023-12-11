@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>3d model</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Geany 1.37.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+    <!--  REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--  OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <!--     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script> -->
+
+    <!--  OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <!--     <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script> -->
+
+    <!--  OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <!--
+   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	-->
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="model.html">Model Mobil</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <!-- 3D content for your site: -->
+
+    <model-viewer
+      src="scene.gltf"
+      alt="A 3D model of a car"
+      shadow-intensity="2"
+      camera-controls
+      auto-rotate
+      ar
+    >
+    </model-viewer>
+
+    <audio id="audioPlayer" controls style="display: none;">
+      <source src="suara/ae86 4age.mp3
+    " type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <div class = "container"><button class="suara" onclick="toggleAudio()">Start Engine</button>&nbsp;
+      <button type="button" class="suara" data-toggle="modal" data-target="#myModal">Spesifikasi</button>&nbsp;
+      <button class="suara" onclick="pindahHalaman()">GT86</button>&nbsp;
+      </div>
+    
+    <script src="next.js"></script>
+    
+    <script>
+      var audio = document.getElementById('audioPlayer');
+    
+      function toggleAudio() {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
+    
+    
+    <div class="container">
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">AE86</h4>
+            </div>
+            <div class="modal-body">
+              <section id="mobil-features">
+                <div id="container">
+                  <h2><b>Toyota AE86 Trueno Black Limited - Spesifikasi</b></h2>
+                  <table>
+                    <tr>
+                      <th>Fitur</th>
+                      <th>Deskripsi</th>
+                    </tr>
+                    <tr>
+                      <td>Mesin</td>
+                      <td>4A-GE, 1.6L, DOHC, Karburator Ganda</td>
+                    </tr>
+                    <tr>
+                      <td>Transmisi</td>
+                      <td>Manual 5-Speed</td>
+                    </tr>
+                    <tr>
+                      <td>Penggerak Roda</td>
+                      <td>Rear-Wheel Drive (RWD)</td>
+                    </tr>
+                    <tr>
+                      <td>Suspensi</td>
+                      <td>Depan: McPherson Strut, Belakang: Double Wishbone</td>
+                    </tr>
+                    <tr>
+                      <td>Rem</td>
+                      <td>Depan: Cakram Ventilasi, Belakang: Cakram</td>
+                    </tr>
+                    <tr>
+                      <td>Bobot</td>
+                      <td>960 kg</td>
+                    </tr>
+                    <tr>
+                      <td>Output Tenaga</td>
+                      <td>112 hp @ 6600 rpm</td>
+                    </tr>
+                    <tr>
+                      <td>Torsi Maksimum</td>
+                      <td>97 lb-ft @ 4800 rpm</td>
+                    </tr>
+                    <tr>
+                      <td>0-60 mph</td>
+                      <td>8.3 detik</td>
+                    </tr>
+                    <tr>
+                      <td>Produksi</td>
+                      <td>Model Terbatas - Black Limited</td>
+                    </tr>
+                  </table>
+                </div>
+              </section>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </body>
+</html>

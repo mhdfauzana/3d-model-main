@@ -1,0 +1,267 @@
+model-viewer {
+  width: 100vw;
+  height: 86vh;
+  background-color: #ffffff;
+}
+
+/* Reset CSS */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Style untuk body */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Style untuk header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style untuk header h1 */
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Style untuk navigasi */
+nav {
+  background-color: rgb(0, 0, 0);
+  color: #080808;
+}
+
+/* Style untuk navigasi ul */
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Style untuk navigasi li */
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+/* Style untuk navigasi a */
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Style untuk main content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style untuk container WebGL */
+#container {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000000;
+  color: rgb(245, 221, 0);
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+
+/* Style untuk info dan color picker */
+#info {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style untuk color picker input */
+.colorPicker input {
+  margin-top: 10px;
+}
+
+/* Style untuk bagian lainnya */
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style untuk footer */
+footer {
+  text-align: center;
+  color: #000000;
+  padding: 10px 0;
+}
+
+/* Style untuk tautan dalam footer */
+footer a {
+  color: #08f;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right; /* Tombol akan diposisikan di sebelah kanan */
+  margin-right: 30px; /* Untuk memberi sedikit ruang di sebelah kanan */
+}
+
+.suara {
+  appearance: button;
+  background-color: #000000;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFD700;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+ }
+ 
+ .suara:after {
+  background-clip: padding-box;
+  background-color: #000000;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ .suara:main, .suara:focus {
+  user-select: auto;
+ }
+ 
+ .suara:hover:not(:disabled) {
+  filter: brightness(1.1);
+ }
+ 
+ .suara:disabled {
+  cursor: auto;
+ }
+ 
+ .suara:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ .suara:active {
+  padding-bottom: 10px;
+ }
+
+ .suara {
+  appearance: button;
+  background-color: #000000;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFD700;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+ }
+ 
+ .model:after {
+  background-clip: padding-box;
+  background-color: #000000;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ .model:main, .model:focus {
+  user-select: auto;
+ }
+ 
+ .model:hover:not(:disabled) {
+  filter: brightness(1.1);
+ }
+ 
+ .model:disabled {
+  cursor: auto;
+ }
+ 
+ .model:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ .model:active {
+  padding-bottom: 10px;
+ }
